@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Messages</h1>
+
+<%= render 'messages/form', message: Message.new %>
+
+<%= turbo_stream_from "messages" %>
+<div id="messages">
+  <%= render @messages %>
+</div>
